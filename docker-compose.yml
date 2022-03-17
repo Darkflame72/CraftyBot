@@ -1,0 +1,15 @@
+version: "3.7"
+
+services:
+  gateway:
+    build: .
+    restart: always
+    env_file:
+      - .env
+    ports:
+      - "80:3000"
+
+  redis:
+    image: redis:alpine
+    restart: always
+
