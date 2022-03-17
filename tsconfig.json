@@ -3,7 +3,7 @@
     "experimentalDecorators": true,
     "lib": ["ESNext"],
     "target": "ESNext",
-    "module": "ESNext",
+    "module": "system",
     "outDir": "dist",
     "rootDir": ".",
     "baseUrl": ".",
@@ -11,6 +11,7 @@
     "strict": true,
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
+    "outFile": "dist/index.js"
   },
   "include": ["."]
 }

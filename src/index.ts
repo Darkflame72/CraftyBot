@@ -6,6 +6,6 @@ const client = new Client({
 
 // Load all the commands and message component handlers:
 await client.load();
-
+console.log("Loaded all the commands and message component handlers.");
 // Start up the HTTP server;
 await client.listen({ port: 3000 });
