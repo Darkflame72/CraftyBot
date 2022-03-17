@@ -1,7 +1,7 @@
-import { Client } from "./http-framework";
+import { Client } from "./http-framework/index";
 
 const client = new Client({
-  discordPublicKey: process.env.CLIENT_PUBLIC_KEY,
+  discordPublicKey: process.env.DISCORD_PUBLIC_KEY,
 });
 
 // Load all the commands and message component handlers:
