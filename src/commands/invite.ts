@@ -1,4 +1,4 @@
-import { Command, RegisterCommand } from "@skyra/http-framework";
+import { Command, RegisterCommand } from "../http-framework/index";
 import { MessageFlags } from "discord-api-types/v9";
 
 @RegisterCommand({
