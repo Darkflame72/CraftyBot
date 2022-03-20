@@ -1,5 +1,5 @@
 import { Embed, time, TimestampStyles } from "@discordjs/builders";
-import { Command, RegisterCommand } from "../http-framework/index";
+import { Command, RegisterCommand } from "@skyra/http-framework";
 import { MessageFlags } from "discord-api-types/v9";
 import { cpus, uptime, type CpuInfo } from "node:os";
 
