@@ -6,7 +6,7 @@ async function nekokai_client() {
     discordPublicKey: process.env.DISCORD_PUBLIC_KEY,
   });
   await client.load();
-  await client.listen({ port: 3000 });
+  await client.listen({ port: 3000, address: "0.0.0.0" });
   console.log("Logged in!");
 }
 async function nekokai_commandregister() {
