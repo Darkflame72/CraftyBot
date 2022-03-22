@@ -152,6 +152,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@sapphire/utilities@npm:^3.6.0":
+  version: 3.6.1
+  resolution: "@sapphire/utilities@npm:3.6.1"
+  checksum: 0a1479c7cb3f10455906d91a43e9457aec97155f5821d00d572920c0ee25e7842310e8af3ed0e2c967b8adc256016f38b4c3bf8f17843613bcb6754dbe5d9599
+  languageName: node
+  linkType: hard
+
 "@sindresorhus/is@npm:^4.3.0":
   version: 4.6.0
   resolution: "@sindresorhus/is@npm:4.6.0"
@@ -1183,15 +1190,22 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "gateway@workspace:."
   dependencies:
+    "@discordjs/builders": ^0.12.0
+    "@discordjs/collection": ^0.5.0
+    "@discordjs/rest": ^0.3.0
     "@sapphire/pieces": ^3.3.0
     "@sapphire/ts-config": ^3.3.3
+    "@sapphire/utilities": ^3.6.0
     "@skyra/http-framework": ^0.0.7
     "@skyra/shared-http-pieces": ^0.0.7
     "@swc/core": ^1.2.159
     "@types/node": ^17.0.21
     "@types/node-fetch": ^2.6.1
+    discord-api-types: ^0.26.1
     dotenv: ^16.0.0
+    fastify: ^3.27.4
     tsup: ^5.12.1
+    tweetnacl: ^1.0.3
     typescript: ^4.6.2
   languageName: unknown
   linkType: soft

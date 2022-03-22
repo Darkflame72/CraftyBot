@@ -1,11 +1,21 @@
 import { Embed, time, TimestampStyles } from "@discordjs/builders";
-import { Command, RegisterCommand } from "@skyra/http-framework";
+import { Command, RegisterCommand } from "../../http-framework/index";
 import { MessageFlags } from "discord-api-types/v9";
 import { cpus, uptime, type CpuInfo } from "node:os";
+import type {
+  APIApplicationCommandInteraction,
+  APIInteractionResponse,
+} from "discord-api-types/v9";
 
-@RegisterCommand({ name: "statistics", description: "Check my statistics." })
+@RegisterCommand((builder) =>
+  builder //
+    .setName("statistics")
+    .setDescription("Check my statistics.")
+)
 export class UserCommand extends Command {
-  public chatInputRun(): Command.Response {
+  public chatInputRun(
+    interaction: APIApplicationCommandInteraction
+  ): APIInteractionResponse {
     const embed = new Embed()
       .addField({ name: "Uptime", value: this.uptimeStatistics })
       .addField({ name: "Server Usage", value: this.usageStatistics });
