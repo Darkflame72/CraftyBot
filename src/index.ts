@@ -19,6 +19,7 @@ class Crafty extends Client {
     await this.registry.load();
     await this.registry.registerGlobalCommands();
     await this.registry.registerGuildRestrictedCommands();
+    console.log("Registered commands!");
   }
 
   public async run(options: ListenOptions): Promise<void> {
