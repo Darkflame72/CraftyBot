@@ -25,4 +25,4 @@ export const sponsorButton = new ButtonBuilder()
 	.setLabel('Premium')
 	.setEmoji({ name: '🧡' });
 
-export const embedColor = 0x00ff00;
+export const embedColor = 0x1db53b;
