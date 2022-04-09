@@ -19,7 +19,7 @@ export class UserCommand extends Command {
 
 	readonly #staff = [
 		bold(hyperlink('LeeSpork#8175', '')),
-		bold(hyperlink('Name With Exactly 32 Characters!#4004', '')),
+		bold(hyperlink('Name With Exactly 32 Characters!#4004', 'https://github.com/Bobby-McBobface')),
 		bold(hyperlink('Z_runner#7515', '')),
 		bold(hyperlink('Darkflame72#1150', 'https://github.com/darkflame72'))
 	].join('\n');
