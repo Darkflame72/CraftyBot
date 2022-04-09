@@ -1,6 +1,6 @@
 import "dotenv/config";
-import { Client, ListenOptions } from "./http-framework/index";
-import { Registry } from "./http-framework/index";
+import { Client, ListenOptions } from "@skyra/http-framework";
+import { Registry } from "@skyra/http-framework";
 
 interface Options {
   discordPublicKey: string | undefined;
