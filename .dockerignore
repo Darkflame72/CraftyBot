@@ -3,3 +3,5 @@
 .editorconfig
 .vscode
 node_modules
+dist
+scripts
