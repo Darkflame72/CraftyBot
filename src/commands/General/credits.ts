@@ -55,16 +55,18 @@ export class UserCommand extends Command {
 			.setDescription(this.#descriptionContent)
 			.addFields(
 				{
-					name: titles.staff,
-					value: fields.staff
-				},
-				{
 					name: titles.devs,
 					value: fields.devs
 				},
 				{
+					name: titles.staff,
+					value: fields.staff,
+					inline: true
+				},
+				{
 					name: titles.tools,
-					value: fields.tools
+					value: fields.tools,
+					inline: true
 				}
 			)
 			.toJSON();
