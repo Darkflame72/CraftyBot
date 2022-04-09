@@ -1,13 +1,15 @@
 import { EmbedBuilder, hyperlink } from '@discordjs/builders';
-import { Command, RegisterCommand } from '@skyra/http-framework';
+import { Command, RegisterCommand, RestrictGuildIds } from '@skyra/http-framework';
 import { APIEmbed, MessageFlags } from 'discord-api-types/v10';
 import { defaultComponents } from '#utils/buttons';
 import { embedColor } from '#constants/constants';
+import { getGuildIds } from '#utils/utils';
 
 @RegisterCommand({
 	name: 'credits',
 	description: 'See the team behind Crafty and what services we use.'
 })
+@RestrictGuildIds(getGuildIds())
 export class UserCommand extends Command {
 	readonly #descriptionContent = ['These are the tools and people that bring you Crafty.'].join('\n');
 

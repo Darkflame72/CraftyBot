@@ -1,11 +1,13 @@
 import { embedColor } from '#constants/constants';
+import { getGuildIds } from '#utils/utils';
 import { bold, EmbedBuilder, hyperlink } from '@discordjs/builders';
-import { Command, RegisterCommand } from '@skyra/http-framework';
+import { Command, RegisterCommand, RestrictGuildIds } from '@skyra/http-framework';
 
 @RegisterCommand({
 	name: 'vote',
 	description: 'Support the bot by voting for it.'
 })
+@RestrictGuildIds(getGuildIds())
 export class UserCommand extends Command {
 	readonly #description = [
 		'Upvoting is a free way to show your support for Crafty. It helps increase Craftys ranking on Discord bot listing websites. Below are a few ways you can upvote Crafty.\n',

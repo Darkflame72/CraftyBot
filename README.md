@@ -6,7 +6,7 @@ This runs a web server which discord uses to communicate with the bot.
 
 ### Setup
 
-To set the environment variables create a copy of `.env` and call it `.env.local` and set all the variables.
+To set the environment variables create a copy of `.env` and call it `.env.local` and set all the variables. Make sure `COMMAND_GUILD_IDS` has no guilds so they are registered globally.
 
 A web server is required to run the bot which supports https. This should be deployed using a reliable web server such as nginx and secured with a certificate. The `INTERACTIONS ENDPOINT URL` in the discord developer portal should be set to the domain name of the server.
 
@@ -50,6 +50,7 @@ You will also need to create a discord bot account and add the bot to the server
 ### Envinronment Variables
 
 To set the environment variables create a copy of `.env` and call it `.env.local` and set all the variables.
+Make sure to set `COMMAND_GUILD_IDS` to the guilds you are doing development in like `24242 3244234`.
 
 ### Setup
 

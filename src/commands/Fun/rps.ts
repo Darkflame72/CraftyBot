@@ -1,4 +1,5 @@
-import { Command, RegisterCommand } from '@skyra/http-framework';
+import { getGuildIds } from '#utils/utils';
+import { Command, RegisterCommand, RestrictGuildIds } from '@skyra/http-framework';
 
 @RegisterCommand((builder) =>
 	builder //
@@ -12,6 +13,7 @@ import { Command, RegisterCommand } from '@skyra/http-framework';
 				.addChoices({ name: 'rock', value: 'rock' }, { name: 'paper', value: 'paper' }, { name: 'shears', value: 'shears' })
 		)
 )
+@RestrictGuildIds(getGuildIds())
 export class UserCommand extends Command {
 	readonly #options = ['rock', 'paper', 'shears'];
 	public override chatInputRun(_: never, { choice }: { choice: string }): Command.Response {

@@ -9,9 +9,7 @@ const client = new Client({
 
 await client.load();
 
-if (process.env.NODE_ENV === 'production') {
-	await registerCommands();
-}
+await registerCommands();
 
 await client.listen({
 	port: process.env.PORT || 3000,

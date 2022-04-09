@@ -1,7 +1,8 @@
 import { embedColor, inviteLink } from '#constants/constants';
 import { defaultComponents } from '#utils/buttons';
+import { getGuildIds } from '#utils/utils';
 import { EmbedBuilder, hyperlink } from '@discordjs/builders';
-import { Command, RegisterCommand } from '@skyra/http-framework';
+import { Command, RegisterCommand, RestrictGuildIds } from '@skyra/http-framework';
 import { MessageFlags, type APIEmbed } from 'discord-api-types/v10';
 
 @RegisterCommand((builder) =>
@@ -9,6 +10,7 @@ import { MessageFlags, type APIEmbed } from 'discord-api-types/v10';
 		.setName('volunteer')
 		.setDescription('Help with volunteering for Crafty.')
 )
+@RestrictGuildIds(getGuildIds())
 export class UserCommand extends Command {
 	readonly #descriptionContent = [
 		'Crafty needs you and your skills!\n',

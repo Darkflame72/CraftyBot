@@ -1,8 +1,9 @@
 import { embedColor } from '#constants/constants';
 import { defaultComponents } from '#utils/buttons';
+import { getGuildIds } from '#utils/utils';
 import { EmbedBuilder, time, TimestampStyles } from '@discordjs/builders';
 import { roundNumber } from '@sapphire/utilities';
-import { Command, RegisterCommand } from '@skyra/http-framework';
+import { Command, RegisterCommand, RestrictGuildIds } from '@skyra/http-framework';
 import { MessageFlags, type APIEmbed } from 'discord-api-types/v10';
 import { cpus, uptime, type CpuInfo } from 'node:os';
 
@@ -11,6 +12,7 @@ import { cpus, uptime, type CpuInfo } from 'node:os';
 		.setName('info')
 		.setDescription('Provides information about this application, and links for adding it and joining the support server.')
 )
+@RestrictGuildIds(getGuildIds())
 export class UserCommand extends Command {
 	readonly #descriptionContent = ['The most advanced Minecraft bot for Discord.', 'A must-have bot for your Minecraft community.'].join('\n');
 
