@@ -51,7 +51,7 @@ You will also need to create a discord bot account and add the bot to the server
 
 To set the environment variables create a copy of `.env` and call it `.env.local` and set all the variables.
 
-#### Setup
+### Setup
 
 To setup the project install all the dependencies.
 
@@ -59,11 +59,11 @@ To setup the project install all the dependencies.
 yarn install
 ```
 
-Some further config steps are required for discord to be able to access your local server.
+### Tunnel
 
 As the bot runs a web server the local instance needs to be available from the internet and secured with https. There are multiple ways to do this.
 
-A possible method is to use ngrok to create a local tunnel to the server. A CNAME record inside cloudflare is pointed to the tunnel to provide https and the `INTERACTIONS ENDPOINT URL` in the discord developer portal should be set to the domain name of the server.
+The recommended method is to use [localtunnel](https://localtunnel.github.io/www/) to expose the local web server. This creates a tunnel secured using https. To use create the tunnel running `yarn dlx localtunnel lt --port 3000` and leaving that terminal open. All development can continue as normal. Make sure to update the `INTERACTIONS ENDPOINT URL` in the discord developer portal should be set to the domain name of the server.
 
 It is HIGHLY recommended to comment out line 12 in `src/index.ts` to avoid getting ratelimited by discord. Only uncomment when you need to register new commands.
 
