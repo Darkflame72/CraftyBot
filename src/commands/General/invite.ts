@@ -1,17 +1,17 @@
-import { hyperlink } from "@discordjs/builders";
-import { Command, RegisterCommand } from "@skyra/http-framework";
-import { MessageFlags } from "discord-api-types/v10";
+import { hyperlink } from '@discordjs/builders';
+import { Command, RegisterCommand } from '@skyra/http-framework';
+import { MessageFlags } from 'discord-api-types/v10';
 
 @RegisterCommand({
-  name: "invite",
-  description: "Check how you can invite me.",
+	name: 'invite',
+	description: 'Check how you can invite me.'
 })
 export class UserCommand extends Command {
-  public override chatInputRun(): Command.Response {
-    const content = `You can invite me anytime by opening my user card. You can also use the following ${hyperlink(
-      "link",
-      "https://crafty.gg/bot/invite"
-    )}`;
-    return this.message({ content, flags: MessageFlags.Ephemeral });
-  }
+	public override chatInputRun(): Command.Response {
+		const content = `You can invite me anytime by opening my user card. You can also use the following ${hyperlink(
+			'link',
+			'https://crafty.gg/bot/invite'
+		)}`;
+		return this.message({ content, flags: MessageFlags.Ephemeral });
+	}
 }

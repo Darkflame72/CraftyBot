@@ -1,0 +1,19 @@
+{
+	"extends": "../tsconfig.base.json",
+	"compilerOptions": {
+		"rootDir": ".",
+		"baseUrl": ".",
+		"outDir": "../dist",
+		"composite": true,
+		"tsBuildInfoFile": "../dist/tsconfig.tsbuildinfo",
+		"emitDeclarationOnly": true,
+		"paths": {
+			"#utils/*": ["lib/util/*"],
+			"#types/*": ["lib/types/*"],
+			"#constants/*": ["lib/constants/*"],
+			"#env/*": ["lib/env/*"],
+			"#lib/*": ["lib/*"]
+		}
+	},
+	"include": ["."]
+}
