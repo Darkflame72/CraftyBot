@@ -65,6 +65,8 @@ As the bot runs a web server the local instance needs to be available from the i
 
 A possible method is to use ngrok to create a local tunnel to the server. A CNAME record inside cloudflare is pointed to the tunnel to provide https and the `INTERACTIONS ENDPOINT URL` in the discord developer portal should be set to the domain name of the server.
 
+It is HIGHLY recommended to comment out line 12 in `src/index.ts` to avoid getting ratelimited by discord. Only uncomment when you need to register new commands.
+
 ### Docker
 
 Docker is supported and encouraged for local development as it looks after all dependencies and ensures a production ready environment. You can use the docker-compose file to deploy after each change.
