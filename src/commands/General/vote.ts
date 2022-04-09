@@ -1,42 +1,24 @@
-import { bold, hyperlink, UnsafeEmbedBuilder } from '@discordjs/builders';
+import { embedColor } from '#constants/constants';
+import { bold, EmbedBuilder, hyperlink } from '@discordjs/builders';
 import { Command, RegisterCommand } from '@skyra/http-framework';
-import { MessageFlags } from 'discord-api-types/v10';
 
 @RegisterCommand({
 	name: 'vote',
 	description: 'Support the bot by voting for it.'
 })
 export class UserCommand extends Command {
-	private readonly devs = [
-		bold(hyperlink('Tj#0001', 'https://github.com/talle117')),
-		bold(hyperlink('Chinese_Marc#7768', 'https://github.com/ChineseMarc')),
-		bold(hyperlink('Robert#0006', 'https://github.com/treboryx'))
-	];
-
-	private readonly staff = [
-		bold(hyperlink('LeeSpork#8175', '')),
-		bold(hyperlink('Name With Exactly 32 Characters!#4004', '')),
-		bold(hyperlink('Z_runner#7515', '')),
-		bold(hyperlink('Darkflame72#1150', 'https://github.com/darkflame72'))
-	];
-
-	private readonly tools = [
-		bold(hyperlink('Discord.js', 'https://discord.js.org')),
-		bold(hyperlink('Mojang API', 'https://wiki.vg/Mojang_API')),
-		bold(hyperlink('Server information', 'https://github.com/treboryx/mc-stats')),
-		bold(hyperlink('HTTP Framework', 'https://github.com/skyra-project/archid-components/tree/main/packages/shared-http-pieces'))
-	];
+	readonly #description = [
+		'Upvoting is a free way to show your support for Crafty. It helps increase Craftys ranking on Discord bot listing websites. Below are a few ways you can upvote Crafty.\n',
+		`${hyperlink('Top.gg', 'https://top.gg/bot/crafty/vote')} (Upvote rewards)`,
+		`${hyperlink('Bots For Discord', 'https://botsfordiscord.com/bot/crafty')}`,
+		`\n${bold('Vote locking')}`,
+		"While using Crafty you may notice that some commands require you to upvote Crafty for you to continue. This lock is in place to slowdown traffic on highly used commands. If you're unable to upvote or would like to skip it, you can use /vote skip. Skipping the upvote will remove the votelock on commands."
+	].join('\n');
 
 	public override chatInputRun(): Command.Response {
-		const embed = new UnsafeEmbedBuilder().addFields(
-			{ name: 'Developers', value: this.devs.join('\n') },
-			{ name: 'Staff', value: this.staff.join('\n') },
-			{ name: 'Tools', value: this.tools.join('\n') }
-		);
-
+		const embed = new EmbedBuilder().setColor(embedColor).setDescription(this.#description).setTitle('Upvote Crafty');
 		return this.message({
-			embeds: [embed.toJSON()],
-			flags: MessageFlags.Ephemeral
+			embeds: [embed.toJSON()]
 		});
 	}
 }

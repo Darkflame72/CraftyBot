@@ -24,3 +24,5 @@ export const sponsorButton = new ButtonBuilder()
 	.setURL('https://crafty.gg/premium')
 	.setLabel('Premium')
 	.setEmoji({ name: '🧡' });
+
+export const embedColor = 0x00ff00;

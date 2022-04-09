@@ -2,6 +2,7 @@ import { bold, EmbedBuilder, hyperlink } from '@discordjs/builders';
 import { Command, RegisterCommand } from '@skyra/http-framework';
 import { APIEmbed, MessageFlags } from 'discord-api-types/v10';
 import { defaultComponents } from '#utils/buttons';
+import { embedColor } from '#constants/constants';
 
 @RegisterCommand({
 	name: 'credits',
@@ -50,7 +51,7 @@ export class UserCommand extends Command {
 			tools: this.#tools
 		};
 		return new EmbedBuilder() //
-			.setColor(0x254fb9)
+			.setColor(embedColor)
 			.setDescription(this.#descriptionContent)
 			.addFields(
 				{

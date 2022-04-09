@@ -1,4 +1,4 @@
-import { inviteLink } from '#constants/constants';
+import { embedColor, inviteLink } from '#constants/constants';
 import { defaultComponents } from '#utils/buttons';
 import { EmbedBuilder, hyperlink } from '@discordjs/builders';
 import { Command, RegisterCommand } from '@skyra/http-framework';
@@ -46,7 +46,7 @@ export class UserCommand extends Command {
 		};
 
 		return new EmbedBuilder() //
-			.setColor(0x254fb9)
+			.setColor(embedColor)
 			.setDescription(this.#descriptionContent)
 			.addFields({
 				name: titles.translators,

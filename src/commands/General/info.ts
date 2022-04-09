@@ -1,3 +1,4 @@
+import { embedColor } from '#constants/constants';
 import { defaultComponents } from '#utils/buttons';
 import { EmbedBuilder, time, TimestampStyles } from '@discordjs/builders';
 import { roundNumber } from '@sapphire/utilities';
@@ -47,7 +48,7 @@ export class UserCommand extends Command {
 		};
 
 		return new EmbedBuilder() //
-			.setColor(0x254fb9)
+			.setColor(embedColor)
 			.setDescription(this.#descriptionContent)
 			.addFields(
 				{
