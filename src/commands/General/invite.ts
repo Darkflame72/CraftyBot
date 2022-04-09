@@ -11,7 +11,7 @@ export class UserCommand extends Command {
 		const content = `You can invite me anytime by opening my user card. You can also use the following ${hyperlink(
 			'link',
 			'https://crafty.gg/bot/invite'
-		)}`;
+		)}.`;
 		return this.message({ content, flags: MessageFlags.Ephemeral });
 	}
 }

@@ -23,7 +23,7 @@ export class UserCommand extends Command {
 		}
 
 		const botChoice = this.#options[Math.floor(Math.random() * this.#options.length)];
-		let content = `I choose ${botChoice} you chose ${choice}.`;
+		let content = `I chose ${botChoice} you chose ${choice}.`;
 		if (botChoice === choice) content += "\nIt's a tie!";
 		else if ((this.#options.findIndex((option) => option === botChoice) + 1) % 3 === this.#options.findIndex((option) => option === choice))
 			content += '\nYou win!';

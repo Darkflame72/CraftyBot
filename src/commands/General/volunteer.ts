@@ -11,7 +11,7 @@ import { MessageFlags, type APIEmbed } from 'discord-api-types/v10';
 )
 export class UserCommand extends Command {
 	readonly #descriptionContent = [
-		'Crafty needs you and your skills!',
+		'Crafty needs you and your skills!\n',
 		`Currently the team behind Crafty are looking for people who can help Crafty in many ways, below are the current positions we have available. Join the support Discord server and message a member of the staff/developer team here ${inviteLink} if you are interested in helping out!`
 	].join('\n');
 
@@ -22,7 +22,7 @@ export class UserCommand extends Command {
 		':flag_fr: French',
 		':flag_ru: Russian',
 		':flag_pt: Portuguese',
-		`Do you speak a language not on this list and would like to help translate, join the support Discord server ${hyperlink(
+		`\nDo you speak a language not on this list and would like to help translate, join the support Discord server ${hyperlink(
 			'here',
 			inviteLink
 		)} and let us know!`
