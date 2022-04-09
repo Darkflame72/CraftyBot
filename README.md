@@ -67,14 +67,6 @@ The recommended method is to use [localtunnel](https://localtunnel.github.io/www
 
 It is HIGHLY recommended to comment out line 12 in `src/index.ts` to avoid getting ratelimited by discord. Only uncomment when you need to register new commands.
 
-### Docker
-
-Docker is supported and encouraged for local development as it looks after all dependencies and ensures a production ready environment. You can use the docker-compose file to deploy after each change.
-
-```bash
-docker-compose up --build
-```
-
 ### Running locally
 
 To run locally run the following command which will rebuild and start the bot on each code change.
