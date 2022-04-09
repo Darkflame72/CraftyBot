@@ -1,6 +1,4 @@
-import { hyperlink } from '@discordjs/builders';
 import { Command, RegisterCommand } from '@skyra/http-framework';
-import { MessageFlags } from 'discord-api-types/v10';
 
 @RegisterCommand((builder) =>
 	builder //

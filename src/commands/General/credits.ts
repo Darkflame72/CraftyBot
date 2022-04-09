@@ -1,4 +1,4 @@
-import { bold, EmbedBuilder, hyperlink } from '@discordjs/builders';
+import { EmbedBuilder, hyperlink } from '@discordjs/builders';
 import { Command, RegisterCommand } from '@skyra/http-framework';
 import { APIEmbed, MessageFlags } from 'discord-api-types/v10';
 import { defaultComponents } from '#utils/buttons';

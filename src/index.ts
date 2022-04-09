@@ -9,7 +9,7 @@ const client = new Client({
 
 await client.load();
 
-// await registerCommands();
+await registerCommands();
 
 await client.listen({
 	port: process.env.PORT || 3000,
