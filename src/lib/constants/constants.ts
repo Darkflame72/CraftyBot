@@ -5,7 +5,8 @@ import os from 'node:os';
 export const FailPrefix = `I am sorry, but` as const;
 export const FetchUserAgent = `Crafty Discord Bot (node-fetch) ${os.platform()}/${os.release()} (https://crafty.gg)`;
 
-export const inviteLink = 'https://crafty.gg/bot/invite';
+export const inviteLink =
+	'https://discord.com/oauth2/authorize?client_id=431402543336390666&scope=bot+applications.commands&permissions=388160&response_type=code&redirect_url=https://crafty.gg/bot';
 
 export const SupportServerButton = new ButtonBuilder()
 	.setStyle(ButtonStyle.Link)
