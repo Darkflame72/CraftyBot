@@ -66,8 +66,6 @@ As the bot runs a web server the local instance needs to be available from the i
 
 The recommended method is to use [localtunnel](https://localtunnel.github.io/www/) to expose the local web server. This creates a tunnel secured using https. To use create the tunnel running `yarn dlx localtunnel lt --port 3000` and leaving that terminal open. All development can continue as normal. Make sure to update the `INTERACTIONS ENDPOINT URL` in the discord developer portal should be set to the domain name of the server.
 
-It is HIGHLY recommended to comment out line 12 in `src/index.ts` to avoid getting ratelimited by discord. Only uncomment when you need to register new commands.
-
 ### Running locally
 
 To run locally run the following command which will rebuild and start the bot on each code change.
